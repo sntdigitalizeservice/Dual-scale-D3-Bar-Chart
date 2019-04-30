@@ -63,7 +63,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("class", "graph")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
+// как забрать данные не из файла csv а из массива dataset c такими же key/value ?
 d3.tsv("data.tsv", type, function(error, data) {
   x.domain(data.map(function(d) { return d.year; }));
   y0.domain([0, d3.max(data, function(d) { return d.money; })]);
